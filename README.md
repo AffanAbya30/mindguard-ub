@@ -40,9 +40,9 @@ MindGuard UB terdiri dari empat output utama yang saling melengkapi.
 
 | Komponen | Metode | Fungsi |
 |----------|--------|--------|
-| Klasifikasi Kondisi Mental | MultiOutputClassifier (SVM, Random Forest, Logistic Regression, Naive Bayes) | Klasifikasi multi-label: Depression, Anxiety, Panic Attack, Seek Treatment |
+| Klasifikasi Kondisi Mental | MultiOutputClassifier (SVM, Random Forest, Logistic Regression, Naive Bayes) | Klasifikasi multi-label: Depression, Anxiety, Panic Attack |
 | Risk Scoring | Rule-based (Low / Medium / High) | Penentuan tingkat risiko berdasarkan jumlah kondisi yang dialami |
-| Clustering Profil Risiko | K-Means dan K-Medoids (k=3) | Pengelompokan mahasiswa berdasarkan profil demografis dan kondisi mental |
+| Clustering Profil Risiko | K-Means dan DBSCAN | Pengelompokan mahasiswa berdasarkan profil demografis dan kondisi mental (K-Means k=3 dan DBSCAN density-based) |
 | NLP Chatbot | IndoBERT fine-tuned | Pemahaman teks Bahasa Indonesia, deteksi sentimen dan risiko dalam percakapan |
 | Early Warning System | Rule-based threshold + ML score fusion | Pembangkitan alert bertingkat kepada konselor |
 | Forecasting | LSTM, Prophet | Peramalan tren stres dan depresi per semester |
@@ -69,7 +69,7 @@ mindguard-ub/
 └── MindGuard_UB.ipynb
 ```
 
-*Catatan: notebook masih dalam pengembangan. Bagian alur analisis pada README ini akan diperbarui setelah notebook final.*
+*Notebook ini telah selesai dikembangkan dan divalidasi end-to-end dengan pipeline ML bebas kebocoran data serta model clustering K-Means dan DBSCAN.*
 
 ## Referensi
 
